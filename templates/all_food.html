@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+
+<section class="food">
+    <div class="container ">
+        <header>
+            <h1>Wszystkie przepisy</h1>
+        </header>
+    {% for Recipe in Recipes %}
+        <article>
+            <div id="jedzenie" class="container-fluid bg-gray ">
+                <div class="row">
+                    <div class="text-center col-lg-4 col-md-12 order-lg-2 padding1">
+                        <span class=" iconsize unogreen"><img src='{{Recipe.img.url}}' width="260" height="auto" alt="" class="align-middle"></span>
+                    </div>
+                    <div class="col-lg-8 col-md-12 order-lg-1 padding2">
+                        <h2>{{Recipe.name}}</h2><br>
+                        <h4 class="text-justify">KCAL: {{Recipe.kcal}}</h4>
+                        <h4 class="text-justify">TYP: {{Recipe.type}}</h4>
+                        <h4 class="text-justify">KATEGORIA: {{Recipe.category}} </h4>
+                        <h4 class="text-justify">Przepis:</h4>
+                        <p class="text-justify">   
+                        {{Recipe.recipe}} 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article> 
+        <br></br>   
+    {% endfor %}
+    </div>	      
+</section>
+
+{% endblock content %}

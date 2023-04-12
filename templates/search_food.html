@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="food">
+		
+    <div class="container">       
+
+        <header>
+            <h1>Wyszukaj jedzonko</h1>
+            <p>W tej sekcji możesz wyszukać jedzenie</p>
+        </header>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Typ posiłku</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Śniadanie</option>
+                    <option>Obiad</option>
+                    <option>Kolacja</option>
+                    <option>Przekąska/deser</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Kaloryczność</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Do 200 kcal</option>
+                    <option>200-400 kcal</option>
+                    <option>400-800 kcal</option>
+                    <option>Powyżej 800 kcal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Kategoria</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Słodkie</option>
+                    <option>Słone</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" onclick = "myFunction()">Wyszukaj</button>
+        </form>
+    </div>	
+</section>
+
+{% endblock content %}

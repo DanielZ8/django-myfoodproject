@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="food">
+		
+    <div class="container">       
+
+        <header>
+            <h1>Dodaj jedzonko</h1>
+            <p>W tej sekcji możesz dodać jedzenie i podzielić się przepisem z innymi!</p>
+        </header>
+
+        <form>
+
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Nazwa</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nazwa" required placeholder="Podaj nazwe">
+            </div>
+        
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Typ posiłku</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Śniadanie</option>
+                    <option>Obiad</option>
+                    <option>Kolacja</option>
+                    <option>Przekąska/deser</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Kaloryczność</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Do 200 kcal</option>
+                    <option>200-400 kcal</option>
+                    <option>400-800 kcal</option>
+                    <option>Powyżej 800 kcal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Kategoria</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Słodkie</option>
+                    <option>Słone</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Przepis</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Przepis" required placeholder="Podaj przepis"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" onclick = "myFunction()">Dodaj</button>
+        </form>
+    </div>	
+</section>
+
+{% endblock content %}
